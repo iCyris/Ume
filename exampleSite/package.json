@@ -5,8 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "saber",
-    "generate": "saber generate",
-    "build": "saber generate && rm -rf docs && mv .saber/public docs"
+    "generate": "saber generate"
   },
   "devDependencies": {
     "node-sass": "*",
