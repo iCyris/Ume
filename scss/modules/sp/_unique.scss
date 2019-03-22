@@ -1,0 +1,76 @@
+/*
+ * Unique style for SP
+ */
+@media screen and (min-width: 761px) {
+    .header, .footer { display: none; }
+}
+@media screen and (max-width: 760px) {
+    #sp-button {
+        position: fixed;
+        width: 3rem; height: 3rem;
+        left: 4vmin; top: 4vmin;
+        cursor: pointer;
+        z-index: 1000;
+        border-radius: 50%;
+        background-color: $theme-color-ume;
+        box-shadow: 0 0 5px $theme-color-ume;
+        transition: all .4s ease;
+        &:hover { box-shadow: 0 0 10px $theme-color-ume; }
+        div {
+            position: relative;
+            left: 30%; top: calc(50% - 1px);
+            width: 40%; height: 2px;
+            &::before, &::after {
+                content: ""; position: absolute;
+                width: 100%; height: 100%;
+                left: 0; top: 0;
+                background-color: #fff;
+                transition: all .2s ease;
+            }
+            &::before { transform: translateY(.3rem) rotate(0); }
+            &::after { transform: translateY(-.3rem) rotate(0); }
+        }
+        &[data-state="true"] div {
+            &::before { transform: translateY(0) rotate(45deg); }
+            &::after { transform: translateY(0) rotate(-45deg); }
+        }
+    }
+    .sp-title {
+        position: relative;
+        width: 100%;
+        margin-top: 20vh;
+        a {
+            line-height: 50px;
+            text-align: center;
+            display: block;
+        }
+        h1 {
+            font-weight: 500;
+            font-size: 2rem;
+            letter-spacing: 2px;
+        }
+        h2 {
+            font-weight: 400;
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+    }
+    .sp-cover {
+        position: fixed;
+        width: 100vw; height: 100vh;
+        left: 0; top: 0;
+        background-color: rgba(0, 0, 0, .8);
+        z-index: 100;
+        transition: all .4s ease;
+    }
+    .sp-copyright {
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 5vh 4vmin;
+        text-align: center;
+        letter-spacing: 1.5px;
+        font-size: .9rem;
+        font-weight: 400;
+    }
+}

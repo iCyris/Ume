@@ -1,0 +1,49 @@
+/*
+ * Main
+ */
+@media screen and (max-width: 760px) {
+    .main {
+        position: unset;
+        width: 100%;
+        left: 0;
+    }
+    .index-content, .page-content {
+        border-radius: 3px;
+        margin-top: 15vh;
+        height: unset;
+        overflow-y: unset;
+        -webkit-overflow-scrolling: unset;
+        box-shadow: 0 0 12px #d0d0d0;
+        min-height: 65vh;
+    }
+    .index-content {
+        .li-item { padding: 4vmin 0; }
+        .li-item-title { font-size: 1.3rem; letter-spacing: unset; }
+        .li-item-time  { font-size: .9rem; letter-spacing: 1px; }
+    }
+    .page-header {
+        width: 80%;
+        h1 {
+            padding: 7px 0 7px 16px;
+            font-size: 1.5rem;
+            border-left: rgba(158, 122, 122, 0.8) 25px solid;
+            letter-spacing: 1px;
+        }
+        h2 {
+            height: 8px;
+            margin-top: 6px;
+        }
+    }
+    .page-body {
+        margin-top: 8vh;
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 1.4rem;
+        }
+    }
+    .page-footer, .prev-next {
+        margin-top: 10vh;
+    }
+    .page-time { letter-spacing: normal; }
+}

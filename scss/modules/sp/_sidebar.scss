@@ -1,0 +1,39 @@
+/*
+ * Sidebar (SP)
+ */
+@media screen and (max-width: 760px) {
+    .sidebar { position: unset; }
+    .sidebar[data-state="true"] {
+        .site-nav {  transform: translateX(0); }
+    }
+    .sidebar[data-state="false"] {
+        .site-nav {  transform: translateX(-100%); }
+    }
+    .site-nav {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        left: 0; top: 0;
+        width: 70vw; height: 100vh;
+        background-color: #fff;
+        margin: 0;
+        transition: all .4s ease;
+        transform: translateX(-100%);
+        box-sizing: border-box;
+        padding: 4vmin 0;
+        a {
+            font-size: 1.7rem;
+            padding: 4vmin;
+            margin-bottom: 2vmin;
+            letter-spacing: 1px;
+        }
+        z-index: 500;
+    }
+    .site-title {
+        display: none;
+    }
+    .site-copyright {
+        display: none;
+    }
+}

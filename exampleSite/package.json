@@ -1,0 +1,23 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "saber",
+    "generate": "saber generate",
+    "build": "saber generate && rm -rf docs && mv .saber/public docs"
+  },
+  "devDependencies": {
+    "node-sass": "*",
+    "saber": "^0.2.22",
+    "sass-loader": "*"
+  },
+  "dependencies": {
+    "saber": "^0.2.22",
+    "saber-highlighter-prism": "^0.1.2",
+    "saber-generator-feed": "^0.0.2",
+    "saber-plugin-google-analytics": "^0.0.3",
+    "saber-query-posts": "^0.0.2"
+  }
+}
