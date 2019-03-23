@@ -16,6 +16,11 @@ themeConfig:
     - title: "Example"
       link: "/example.html"
 
+  # The Home section on sidebar (mobile)
+  spHome:
+      title: "Home"
+      link: "/"
+      
 markdown:
   highlighter: "prism"
 
