@@ -31,6 +31,7 @@
                 title: themeConfig.title,
                 subTitle: themeConfig.subTitle,
                 nav: themeConfig.sideBar,
+                copyRight: themeConfig.copyRight,
                 spHome: themeConfig.spHome,
                 screenWidth: typeof document === 'object' ? document.documentElement.clientWidth : ''
             }
