@@ -1,8 +1,13 @@
 {
-  "name": "blog",
+  "name": "Ume",
+  "description": "Ume is a theme for saber.js",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "repository": {
+    "url": "iCyris/Ume",
+    "type": "git"
+  },
   "scripts": {
     "dev": "saber",
     "generate": "saber generate"
