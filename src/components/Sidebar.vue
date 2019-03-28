@@ -23,16 +23,14 @@
 </template>
 
 <script>
-    import { themeConfig } from 'saber/config'
-
     export default {
         data() {
             return {
-                title: themeConfig.title,
-                subTitle: themeConfig.subTitle,
-                nav: themeConfig.sideBar,
-                copyRight: themeConfig.copyRight,
-                spHome: themeConfig.spHome,
+                title: this.$themeConfig.title,
+                subTitle: this.$themeConfig.subTitle,
+                nav: this.$themeConfig.sideBar,
+                copyRight: this.$themeConfig.copyRight,
+                spHome: this.$themeConfig.spHome,
                 screenWidth: ''
             }
         },

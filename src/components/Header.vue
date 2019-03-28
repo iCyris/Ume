@@ -16,13 +16,11 @@
 </template>
 
 <script>
-    import { themeConfig } from 'saber/config'
-
     export default {
         data() {
             return {
-                title: themeConfig.title,
-                subTitle: themeConfig.subTitle,
+                title: this.$themeConfig.title,
+                subTitle: this.$themeConfig.subTitle,
                 show: false
             }
         },

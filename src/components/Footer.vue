@@ -7,12 +7,10 @@
 </template>
 
 <script>
-    import { themeConfig } from 'saber/config'
-
     export default {
         data() {
             return {
-                copyRight: themeConfig.copyRight
+                copyRight: this.$themeConfig.copyRight
             }
         }
     }
