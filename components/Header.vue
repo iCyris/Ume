@@ -31,15 +31,15 @@
             clickEvent() {
                 const sideBar = document.querySelector('.sidebar');
                 const spButton = document.querySelector('#sp-button');
-                if (sideBar.getAttribute('data-state') === 'true') {
+                if (sideBar.dataset.state === 'true') {
                     this.show = !this.show;
-                    sideBar.setAttribute('data-state', 'false');
-                    spButton.setAttribute('data-state', 'false');
+                    sideBar.dataset.state = 'false';
+                    spButton.dataset.state = 'false';
                 }
                 else {
                     this.show = !this.show;
-                    sideBar.setAttribute('data-state', 'true');
-                    spButton.setAttribute('data-state', 'true');
+                    sideBar.dataset.state = 'true';
+                    spButton.dataset.state = 'true';
                 }
             }
         }
