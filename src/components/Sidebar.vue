@@ -26,13 +26,27 @@
     export default {
         data() {
             return {
-                title: this.$themeConfig.title,
-                subTitle: this.$themeConfig.subTitle,
-                nav: this.$themeConfig.sideBar,
-                copyRight: this.$themeConfig.copyRight,
-                spHome: this.$themeConfig.spHome,
                 screenWidth: ''
             }
+        },
+
+        computed: {
+            title() {
+                return this.$themeConfig.title
+            },
+            subTitle() {
+                return this.$themeConfig.subTitle
+            },
+            nav() {
+                return this.$themeConfig.sideBar
+            },
+            copyRight() {
+                return this.$themeConfig.copyRight
+            },
+            spHome() {
+                return this.$themeConfig.spHome
+            },
+
         },
 
         mounted: function () {

@@ -8,9 +8,9 @@
 
 <script>
     export default {
-        data() {
-            return {
-                copyRight: this.$themeConfig.copyRight
+        computed: {
+            copyRight() {
+                return this.$themeConfig.copyRight
             }
         }
     }

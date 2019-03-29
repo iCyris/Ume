@@ -19,9 +19,16 @@
     export default {
         data() {
             return {
-                title: this.$themeConfig.title,
-                subTitle: this.$themeConfig.subTitle,
                 show: false
+            }
+        },
+
+        computed: {
+            title() {
+                return this.$themeConfig.title
+            },
+            subTitle() {
+                return this.$themeConfig.subTitle
             }
         },
 

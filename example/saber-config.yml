@@ -30,7 +30,4 @@ plugins:
       trackId: ''
 
   - resolve: saber-plugin-generate-feed
-
-  # inject posts to / and generate tags page
-  # saber no longer does this automatically so we add this plugin
   - resolve: saber-plugin-query-posts
