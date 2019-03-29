@@ -1,0 +1,36 @@
+theme: ../src
+
+siteConfig:
+  title: Ume
+  description: A theme for saber.js
+  url: https://github.com/iCyris/Ume
+  author: Cyris
+
+themeConfig:
+  title: Ume
+  subTitle: A theme for saber.js
+  copyRight: © Copyright
+  sideBar:
+    - title: About
+      link: /about.html
+    - title: Example
+      link: /example.html
+
+  # The Home section on sidebar (mobile)
+  spHome:
+    title: Home
+    link: /
+
+markdown:
+  highlighter: prism
+
+plugins:
+  - resolve: saber-plugin-google-analytics
+    options:
+      trackId: ''
+
+  - resolve: saber-plugin-generate-feed
+
+  # inject posts to / and generate tags page
+  # saber no longer does this automatically so we add this plugin
+  - resolve: saber-plugin-query-posts

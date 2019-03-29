@@ -33,7 +33,6 @@
 </template>
 
 <script>
-    import { siteConfig } from 'saber/config'
     import Header from '../components/Header.vue'
     import Sidebar from '../components/Sidebar.vue'
     import Footer from '../components/Footer.vue'
@@ -54,11 +53,11 @@
         head() {
             const pageTitle = this.page.attributes.title
             return {
-                title: pageTitle ? `${pageTitle} - ${siteConfig.title}` : siteConfig.title,
+                title: pageTitle ? `${pageTitle} - ${this.$siteConfig.title}` : this.$siteConfig.title,
                 meta: [
                     {
                         name: 'description',
-                        content: siteConfig.description
+                        content: this.$siteConfig.description
                     }
                 ]
             }
