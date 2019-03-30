@@ -1,5 +1,7 @@
 # Ume
 
+[![npm](https://badgen.net/npm/v/saber-theme-ume)](https://npm.im/saber-theme-ume)
+
 > Ume is a elegant theme for [Saber.js](https://github.com/egoist/saber).
 
 ![Ume](./media/Ume.png)
