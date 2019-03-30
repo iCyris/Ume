@@ -1,7 +1,7 @@
 {
   "name": "saber-theme-ume",
   "description": "Ume is a theme for saber.js",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "license": "MIT",
   "repository": {
     "url": "iCyris/Ume",
@@ -24,6 +24,6 @@
     "saber-plugin-query-posts": "^0.0.5",
     "sass": "^1.17.3",
     "sass-loader": "^7.1.0",
-    "vue-compile": "^0.5.2"
+    "vue-compile": "^0.5.3"
   }
 }
