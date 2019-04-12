@@ -40,10 +40,14 @@
         letter-spacing: 1px;
         font-weight: 400;
     }
-    .li-item-time {
-        font-size: .9rem;
-        letter-spacing: 2px;
-        margin-top: 2vmin;
+    .li-item-meta {
+        display: flex;
+        justify-content: space-between;
+        div {
+            font-size: .9rem;
+            letter-spacing: 2px;
+            margin-top: 2vmin;
+        }
     }
 }
 // Posts page

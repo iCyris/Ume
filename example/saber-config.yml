@@ -5,6 +5,9 @@ siteConfig:
   description: A theme for saber.js
   url: https://github.com/iCyris/Ume
   author: Cyris
+  categories:
+    - Anime
+    - Manga
 
 themeConfig:
   title: Ume

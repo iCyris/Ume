@@ -2,6 +2,7 @@
 title: Markdown Syntax Guide
 date: 2019-02-23
 layout: page
+category: 1
 ---
 
 This article offers a sample of basic Markdown syntax, also it shows whether basic HTML elements are decorated with CSS in this theme.

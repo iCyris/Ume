@@ -8,8 +8,13 @@
                     <div class="li-item-title">
                         {{ post.attributes.title }}
                     </div>
-                    <div class="li-item-time">
-                        {{ formatDate(post.attributes.createdAt) }}
+                    <div class="li-item-meta">
+                        <div class="li-item-time">
+                            {{ formatDate(post.attributes.createdAt) }}
+                        </div>
+                        <div class="li-item-category">
+                            {{ getCategory(post.attributes.category) }}
+                        </div>
                     </div>
                 </saber-link>
             </div>
@@ -53,6 +58,9 @@
             formatDate(v) {
                 const date = new Date(v)
                 return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`
+            },
+            getCategory(index) {
+                return this.$siteConfig.categories[index]
             }
         },
         head() {
