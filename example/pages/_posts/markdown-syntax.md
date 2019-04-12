@@ -2,6 +2,8 @@
 title: Markdown Syntax Guide
 date: 2019-02-23
 layout: page
+categories:
+- category1
 tags:
 - tag1
 - tag2
