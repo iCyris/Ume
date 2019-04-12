@@ -13,6 +13,11 @@
                         <slot name="default"></slot>
                     </div>
                 </div>
+                <div class="page-tags" v-if="tags">
+                    <saber-link class="tag" :to="`/tags/${tag}`" v-for="tag in tags" :key="tag">
+                        #{{ tag }}
+                    </saber-link>
+                </div>
                 <div class="page-footer">
                     <time class="page-time">
                         {{ formatDate(page.attributes.createdAt) }}
@@ -48,6 +53,11 @@
             formatDate(v) {
                 const date = new Date(v)
                 return `${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate()}`
+            }
+        },
+        computed: {
+            tags() {
+                return this.page.attributes.tags && this.page.attributes.tags.sort()
             }
         },
         head() {

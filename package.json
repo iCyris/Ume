@@ -1,7 +1,7 @@
 {
   "name": "saber-theme-ume",
-  "description": "Ume is a theme for saber.js",
-  "version": "1.0.3",
+  "description": "Ume is a elegant theme for saber.js",
+  "version": "1.1.0",
   "license": "MIT",
   "repository": {
     "url": "iCyris/Ume",
@@ -17,7 +17,7 @@
     "generate:example": "saber generate example"
   },
   "devDependencies": {
-    "saber": "^0.3.1",
+    "saber": "^0.4.2",
     "saber-highlighter-prism": "^0.1.2",
     "saber-plugin-generate-feed": "^0.0.4",
     "saber-plugin-google-analytics": "^0.0.3",
