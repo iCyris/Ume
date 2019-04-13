@@ -1,11 +1,13 @@
-exports.onCreatePages = function() {
+exports.onCreatePages = function () {
   // Sort posts by createdAt (date) from new to old
   const posts = [...this.pages.values()]
     .filter(page => page.attributes.type === 'post' && !page.attributes.draft)
     .sort((a, b) => {
       return a.attributes.createdAt > b.attributes.createdAt ? 1 : -1
     })
+  this.config.siteConfig.tags = []
   for (const [index, post] of posts.entries()) {
+    this.config.siteConfig.tags = [...this.config.siteConfig.tags, ...post.attributes.tags]
     // It's NOT recommended to mutate `page` directly to add addtional props
     // Use `extendPageProp` instead to add more properties to the `page` prop on your layout page
     this.pages.extendPageProp(post.internal.id, {
