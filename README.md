@@ -55,7 +55,7 @@ themeConfig:
     - title: About
       link: /about.html
     - title: Tags
-      link: /tags.html  # you need to add `/example/pages/tags.vue` in your `pages` folder to enable the tag cloud page.
+      link: /tags.html  # You need to add `/example/pages/tags.vue` in your `pages` folder to enable the tag cloud page.
 
   # The Home section on sidebar, this will shown on mobile device.
   spHome:
