@@ -21,7 +21,7 @@ theme: ume
 ## Plugins
 
 ```bash
-yarn add saber-plugin-query-posts saber-plugin-generate-feed saber-highlighter-prism
+yarn add saber-plugin-query-posts saber-plugin-feed saber-highlighter-prism
 ```
 
 ## Layouts

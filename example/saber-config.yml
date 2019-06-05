@@ -31,5 +31,5 @@ plugins:
     options:
       trackId: ''
 
-  - resolve: saber-plugin-generate-feed
+  - resolve: saber-plugin-feed
   - resolve: saber-plugin-query-posts

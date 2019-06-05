@@ -6,6 +6,7 @@
     width: 70%; height: 100%;
     left: 25%; top: 0;
 }
+
 // Common style
 .index-content, .page-content {
     position: relative;
@@ -14,12 +15,20 @@
     left: 0; top: 0;
     box-sizing: border-box;
     background-color: #fefefe;
-    background-image: url("/images/back_02.svg");
+    background-image: url("../public/images/back_02.svg");
     background-size: 20px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
     box-shadow: 0 0 20px #d0d0d0;
 }
+
 // Index page
 .index-content {
     .li-item {
@@ -31,37 +40,43 @@
         border-bottom: 1px dashed $theme-color-ume;
         transition: all .3s ease;
         cursor: pointer;
+
         &:hover {
-            background-color: $theme-color-ume__10;
+            background-color: transparentize($theme-color-ume, .9);
         }
     }
+
     .li-item-title {
         font-size: 1.6rem;
         letter-spacing: 1px;
         font-weight: 400;
     }
+
     .li-item-time {
         font-size: .9rem;
         letter-spacing: 2px;
         margin-top: 2vmin;
     }
 }
+
 // Posts page
 .page-header {
     width: 60%;
     margin: 0 auto;
     margin-top: 5vmin;
     box-sizing: border-box;
+
     h1 {
         padding: 8px 0 8px 20px;
         font-weight: 500;
-        border-left: $theme-color-ume__80 30px solid;
+        border-left: transparentize($theme-color-ume, .2) 30px solid;
         letter-spacing: 2px;
     }
+
     h2 {
         margin-top: 8px;
         width: 100%; height: 10px;
-        background-color: $theme-color-ume__30;
+        background-color: transparentize($theme-color-ume, .7);
     }
     h1, h2 {
         position: relative;
@@ -75,26 +90,31 @@
         }
     }
 }
+
 .page-body {
     position: relative;
     margin-top: 10vmin;
     opacity: 0;
+
     img {
         max-width: 100%;
         box-shadow: 0 0 10px #d0d0d0;
         margin: 20px 0;
     }
+
     h1, h2, h3, h4, h5, h6 {
         font-weight: bold;
         margin: 40px auto 30px auto;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
     }
+
     p {
         font-size: 1.1rem;
         line-height: 1.75em;
         font-weight: 400;
         margin-bottom: 20px;
     }
+
     code {
         color: $theme-color-rokusyoh;
         padding: 3px 5px;
@@ -103,10 +123,12 @@
         background-color: #f9f9f9;
         border-radius: 2px;
     }
+
     a {
         color: $theme-color-ume;
         transition: all .3s ease;
     }
+
     blockquote {
         margin: 20px 0;
         border-left: 5px $theme-color-green solid;
@@ -115,49 +137,55 @@
             margin-bottom: 0;
         }
     }
+
     ol, ul {
         list-style-position: inside;
         margin: 20px 0;
+
         li {
             margin: 10px 0;
         }
     }
+
     table {
+        display: inline-block;
+        max-width: 100%;
         padding: 20px;
         border-radius: 15px;
+        border-collapse: collapse;
         background-color: #fff;
         box-shadow: 0 0 10px #cfcfcf;
         margin: 30px 0;
-        word-wrap: break-word;
         box-sizing: border-box;
-        tr {
-            display: block;
-            line-height: 2.5rem;
-        }
+        word-break: break-word;
+
         th, td {
-            width: 8rem;
-            display: inline-block;
             border-right: 1px dashed $theme-color-black;
-            padding: 0 10px;
+            padding: .9rem;
+            text-align: center;
+
             &:nth-last-child(1) {
                 border-right: 1px transparent;
             }
         }
     }
+
     thead tr {
-        background-color: $theme-color-ume__40;
+        background-color: transparentize($theme-color-ume, .6);
         border-top: 1px dashed $theme-color-black;
         border-bottom: 1px dashed $theme-color-black;
-        text-align: left;
     }
+
     tbody tr {
         border-bottom: 1px dashed $theme-color-black;
     }
 }
+
 .page-tags {
     position: relative;
     opacity: 0;
     margin-top: 6vmin;
+
     a {
         display: inline-block;
         position: relative;
@@ -168,11 +196,13 @@
         border-radius: 2px;
         transition: all .3s ease;
     }
+
     a:hover {
         color: #fff;
         background-color: $theme-color-ume;
     }
 }
+
 .page-footer {
     position: relative;
     opacity: 0;
@@ -181,15 +211,18 @@
     letter-spacing: 2px;
     font-weight: 400;
 }
+
 .prev-next {
     position: relative;
     opacity: 0;
     margin-top: 15vmin;
+
     a {
         display: inline-block;
         position: absolute;
         max-width: 50%;
         bottom: 0;
+
         &::after {
             content: ""; position: absolute;
             width: 100%; height: 1px;
@@ -198,13 +231,16 @@
             transition: all .3s ease;
             transform: scaleX(0);
         }
+
         &:hover::after, &:active::after {
             transform: scaleX(1);
         }
+
         &:nth-child(1) {
             left: 0;
             text-align: left;
         }
+
         &:nth-child(2) {
             right: 0;
             text-align: right;
@@ -216,11 +252,13 @@
  * Animations
  */
 .li-item { animation: page-in .6s ease forwards; }
+
 .page-content {
     .page-header {
         h1, h2 { animation: fadein .1s linear alternate 3 forwards; }
         h1::after { animation: slide-left  .4s ease .3s forwards; }
         h2::after { animation: slide-right .4s ease .3s forwards; }
     }
+
     .page-body, .page-tags, .page-footer, .prev-next { animation: page-in .6s ease .3s forwards; }
 }

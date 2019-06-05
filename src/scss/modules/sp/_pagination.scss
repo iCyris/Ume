@@ -7,22 +7,27 @@
         margin: 0;
         position: relative;
         width: 100%;
+
         div, a {
             display: inline-block;
             margin: 0;
             padding: 0 15px;
         }
+
         a {
             position: absolute;
             font-size: 1.5rem;
             line-height: 1rem;
         }
+
         div {
             font-size: 1rem;
         }
+
         .prev {
             left: 0;
         }
+
         .next {
             right: 0;
         }

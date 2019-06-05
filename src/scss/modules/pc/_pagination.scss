@@ -8,15 +8,18 @@
     margin: 5vmin 0;
     font-weight: 400;
     text-align: center;
+
     a, div {
         margin-top: 1rem;
     }
+
     a {
         display: block;
         font-size: 1.5rem;
         transition: color .2s ease;
         &:hover { color: $theme-color-ume; }
     }
+
     div {
         font-size: .9rem;
     }

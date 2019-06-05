@@ -24,12 +24,12 @@
                     </time>
                 </div>
                 <div class="prev-next" v-if="page.prevPost || page.nextPost">
-                    <router-link v-if="page.prevPost" :to="page.prevPost.attributes.permalink" class="prev">
-                        ← {{ page.prevPost.attributes.title }}
-                    </router-link>
-                    <router-link v-if="page.nextPost" :to="page.nextPost.attributes.permalink" class="next">
-                        {{ page.nextPost.attributes.title }} →
-                    </router-link>
+                    <saber-link v-if="page.prevPost" :to="page.prevPost.permalink" class="prev">
+                        ← {{ page.prevPost.title }}
+                    </saber-link>
+                    <saber-link v-if="page.nextPost" :to="page.nextPost.permalink" class="next">
+                        {{ page.nextPost.title }} →
+                    </saber-link>
                 </div>
             </div>
         </div>
